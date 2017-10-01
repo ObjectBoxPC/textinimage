@@ -9,7 +9,7 @@ args = parse_args()
 if args.operation == "embed":
     embed_text()
 elif args.operation == "extract":
-    extract_text()
+    extract_text(args.input, args.output)
 else:
     print("Invalid operation???")
     sys.exit(1)
