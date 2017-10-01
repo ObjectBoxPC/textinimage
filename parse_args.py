@@ -2,6 +2,10 @@ from argparse import ArgumentParser
 import sys
 
 def parse_args():
+    """
+    Parse the command-line arguments and return an object with attributes
+    representing the argument values.
+    """
     arg_parser = ArgumentParser()
     subparsers = arg_parser.add_subparsers(title="operations",
         help="Operation",
@@ -15,6 +19,7 @@ def parse_args():
     return args
 
 def _add_embed_args(subparsers):
+    """Add arguments for embeddding."""
     parser = subparsers.add_parser("embed", help="Embed text in image")
     parser.add_argument("-i", "--input", help="Input image", required=True)
     text_group = parser.add_mutually_exclusive_group(required=True)
@@ -23,6 +28,7 @@ def _add_embed_args(subparsers):
     parser.add_argument("-o", "--output", help="Output image", required=True)
 
 def _add_extract_args(subparsers):
+    """Add arguments for extracting."""
     parser = subparsers.add_parser("extract", help="Extract text from image")
     parser.add_argument("-i", "--input", help="Input image", required=True)
     parser.add_argument("-o", "--output",
