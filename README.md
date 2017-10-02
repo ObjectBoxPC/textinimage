@@ -25,6 +25,10 @@ To extract text:
 
 For additional options, run `python3 textinimage.py [operation] -h`.
 
+### Images with Embedded Source Code
+
+Images with the text of each source file are included in the `embedded-source` folder.
+
 ### Note on Image Formats
 
 Images with embedded text should be in a lossless format such as PNG, so that the exact pixel values are preserved.
